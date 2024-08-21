@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Frete</title>
+</head>
+<body>
+    
+    <input type="number" id="peso" placeholder="Peso do Produto">
+    <select name="regioes" id="regiao">
+        <option value=""></option>
+        <option value="sudeste">Sudeste</option>
+        <option value="sul">Sul</option>
+        <option value="norte">Norte</option>
+        <option value="nordeste">Nordeste</option>
+        <option value="centro-oeste">Centro-Oeste</option>
+    </select>
+    <button onclick="frete()" id="btn-frete">Enviar</button>
+
+</body>
+</html>
+
+<script src="JS/javascript.js"></script>
+
+<!--- 
+- Norte: até 5kg - R$ 15, acima de 5kg - R$ 25
+- Sul: até 5kg - R$ 10, acima de 5kg - R$ 20
+- Centro-Oeste: até 5kg - R$ 12, acima de 5kg - R$ 22-->
