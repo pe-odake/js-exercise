@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recomendador de roupas</title>
+    <link rel="stylesheet" href="CSS/roupas.css">
 </head>
 <body>
-    <h1>Insira a temperatura em °C:</h1>
-    <input type="number" id="clima" placeholder="Digite a temperatura">
+    <div class="tela">
+        <h1 id="title">Insira a temperatura em °C:</h1>
+<img src="CSS/imagens/termometro.png" alt="">
+    <input type="number" id="clima" placeholder="0" required>
     <button onclick="clima()">Enviar</button>
     <p id="recomendacao"></p>
-
+</div>
     
 </body>
 </html>

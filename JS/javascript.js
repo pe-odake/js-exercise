@@ -1,5 +1,5 @@
 // Jogo Adivinhação
-var numero = Math.floor(Math.random() * 10);
+var numero = Math.floor(Math.random() * 11);
 console.log("numero" + numero);
 
 function jogoAdivinha() {
@@ -277,4 +277,54 @@ function ConverterMoeda() {
       alert('A conversão fica ' + convertido.toFixed(2) + ' Libras Esterlinas');
       break;
   }
+}
+
+// Desafio adivinhação
+var adivinha = Math.floor(Math.random() * 101);
+console.log(adivinha);
+function Desafio(){
+  let numero = document.getElementById("numero").value;
+ 
+
+    do {
+      if(numero == adivinha){
+        alert("parabens!!");
+        break;
+      }else if(numero > adivinha){
+        alert("Um pouco menos, tente novamente");
+        break;
+      } else{
+        alert("um pouco mais, tente novamente");
+        break;
+      }
+    
+    } while (numero !== adivinha );
+
+
+};
+
+/* to tentando fazer sozinho*/
+ 
+
+
+//eu também
+const certo = Math.floor(Math.random() * 101)
+
+function ad(){
+  let numero =document.getElementById("numero").value;
+
+do{
+  if(certo == numero){
+    texto.textContent = 'Parabéns! Você acertou!'
+    }
+    
+  else if(certo < numero){
+    texto.textContent = 'O número é menor! Tente novamente!'
+  }
+  
+  else{
+    texto.textContent = 'O número é maior! Tente novamente!'
+  }
+  
+} while(numero !== adivinha);
 }

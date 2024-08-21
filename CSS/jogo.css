@@ -1,7 +1,42 @@
+/*fonte */
+/**/
+
 *{
     padding: 0;
     margin: 0;
 }
 body{
     background: url(imagens/backgroundCirco.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.tudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(33, 94, 187);
+    width: 552px;
+    height: 780px;
+    margin-top: 150px;
+}
+.titulo{
+    background-color: red;
+    width: 530px;
+    height: 100px;
+    color: yellow;
+    font-size: 30px;
+    font-family: '';
+    border: 10px dotted yellow;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
