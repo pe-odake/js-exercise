@@ -4,22 +4,28 @@
 *{
     padding: 0;
     margin: 0;
+    flex-direction: column;
+}
+header{
+    background-color: rgb(33, 94, 187);
+    height: 80px;
+    width: 100%;
 }
 body{
     background: url(imagens/backgroundCirco.png);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .tudo{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: rgb(33, 94, 187);
+    flex-direction: column;
     width: 552px;
-    height: 780px;
-    margin-top: 150px;
+    height: 300px;
+    margin-top: 50px;
 }
 .titulo{
     background-color: red;
@@ -39,4 +45,34 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+img{
+    height: 80px;
+    width: 80px;
+}
+#numero{
+    margin-top: 50px;
+    background-color: red;
+    color: white;
+    font-size: 35px ;
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: dotted yellow 7px;
+    border-radius: 20px;
+}
+#btn-adivinha{
+    margin-top: 50px;
+    background-color: red;
+    color: white;
+    font-size: 30px ;
+    height: 65px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: dotted yellow 7px;
+    border-radius: 20px;
 }
