@@ -12,11 +12,11 @@ body{
     background-color: black;
 }
 #flipas{
-    position: absolute;
+    position: relative;
     width: 150vw;
     margin-left: 0;
-    bottom: -59.4%;
-    left: -24.5%;
+    bottom: 46.5vh;
+    right: 24.5vw;
   
 }
 .backForm{
@@ -26,10 +26,10 @@ flex-direction: column;
  justify-content: center;
 border-radius: 5px;
 position: absolute;
-top: 31.6%;
-left: 38.6%;
-width: 24.2%;
-height: 37.2%;
+top: 31.6vh;
+left: 38.6vw;
+width: 24.2vw;
+height: 37.2vh;
 background-color: white;
 filter: drop-shadow(0 2rem 10rem rgb(255, 255, 255));
 }
@@ -44,8 +44,8 @@ filter: drop-shadow(0 2rem 10rem rgb(255, 255, 255));
 #h1Pont{
     position: absolute;
     font-size: 3vw;
-    left: 36.5%;
-    top: 12%;
+    left: 36.5vw;
+    top: 12vh;
     filter: drop-shadow(0 1rem 2rem rgb(45, 83, 255));
     color: aqua;
 }

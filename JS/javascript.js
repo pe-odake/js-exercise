@@ -78,11 +78,18 @@ function Saudacao() {
   var resultado = document.getElementById("resultado");
 
   if (hora >= 0 && hora <= 12) {
-    resultado.textContent = ("Bom dia");
+    resultado.textContent = ("Bom dia !!");
+    document.body.style.backgroundImage = "url('../CSS/imagens/fundoDia.jpg')";
+         document.getElementById("resultado").style.color = "#046D12";
+       document.getElementById("h1").style.color = "#046D12";
   } else if (hora >= 13 && hora <= 18) {
-    resultado.textContent = ("Boa tarde");
+    resultado.textContent = ("Boa tarde !!");
+    document.body.style.backgroundImage = "url('../CSS/imagens/fundoTarde.jpg')"; 
   } else {
-    resultado.textContent = ("Boa noite");
+    resultado.textContent = ("Boa noite !!");
+    document.body.style.backgroundImage = "url('../CSS/imagens/fundoNoite.jpg')";
+     document.getElementById("resultado").style.color = "#fff"
+       document.getElementById("h1").style.color = "#fff"
   }
 
 
@@ -123,11 +130,11 @@ function frete() {
 
   switch (true) {
 
-    case 'sudeste':
+    case (seletor==='sudeste'):
       alert ('Não há frete.')
       break;
 
-    case 'nordeste':
+    case (seletor==='nordeste'):
       alert ('Não há frete.')
       break;
 
@@ -149,7 +156,7 @@ function frete() {
       break;
       
     case (seletor==='sul' && pesoProd <= 5):
-      alert ('Frete de R$20,00')
+      alert ('Frete de R$10,00')
       break;
 
     case (seletor==='centro-oeste' && pesoProd <= 5):
@@ -200,29 +207,36 @@ function VerifSenha() {
  
 
   switch (true) {
+    
     case (senha.length < 8 ):
       console.log(senha);
       resposta.textContent = ("Senha precisa ser maior que 8 caracteres");
+      document.getElementById("resposta").style.color = "#f70404";
       break;
       case (senha.length > 8 && senha.length > 16 ):
         console.log(senha);
       resposta.textContent = ("Senha precisa ser menor que 16 caracteres");
+      document.getElementById("resposta").style.color = "#f70404";
         break;
         case (senha.length > 8 && senha.length < 16 && !/[@#$%&*]/.test(senha)):
           console.log(senha);
       resposta.textContent = ("Senha precisa ter no minimo um caracter especial");
+      document.getElementById("resposta").style.color = "#f70404";
           break;
           case (senha.length > 8 && senha.length < 16 && /[@#$%&*]/.test(senha) && !/[A-Z]/.test(senha) ):
             console.log(senha);
             resposta.textContent = ("Senha precisa ter no minimo uma letra maiuscula");
+            document.getElementById("resposta").style.color = "#f70404";
             break;
             case (senha.length > 8 && senha.length < 16 && /[@#$%&*]/.test(senha) && /[A-Z]/.test(senha) && !/[1-9]/.test(senha)):
               console.log(senha);
                 resposta.textContent = ("Senha precisa ter pelo menos um numero");
+                document.getElementById("resposta").style.color = "#f70404";
               break;
               case (senha.length > 8 && senha.length < 16 && /[@#$%&*]/.test(senha) && /[A-Z]/.test(senha) && /[1-9]/.test(senha)):
                 console.log(senha);
                   resposta.textContent = ("Senha Valida");
+                  document.getElementById("resposta").style.color = "51f704";
                 break;
     default:
       resposta.textContent = ("deu problema, tente novamente");
@@ -262,19 +276,20 @@ function clima() {
 function ConverterMoeda() {
   var valor = parseFloat(document.getElementById("valor").value);
   var seletor = document.getElementById("select").value;
+  let resultado = document.getElementById("resultado");
 
   switch (seletor) {
     case "USD":
       var convertido = valor / 5;
-      alert('A conversão fica ' + convertido.toFixed(2) + ' dolares');
+      resultado.textContent = ('A conversão fica ' + convertido.toFixed(2) + ' dolares');
       break;
     case "EUR":
       var convertido = valor / 5.5;
-      alert('A conversão fica ' + convertido.toFixed(2) + ' Euros');
+      resultado.textContent = ('A conversão fica ' + convertido.toFixed(2) + ' Euros');
       break;
     case "GBP":
       var convertido = valor / 6;
-      alert('A conversão fica ' + convertido.toFixed(2) + ' Libras Esterlinas');
+      resultado.textContent = ('A conversão fica ' + convertido.toFixed(2) + ' Libras Esterlinas');
       break;
   }
 }
